@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Testing</title>
+		<link rel="stylesheet" href="../bootstrap-3.4.1-dist/css/bootstrap.min.css" />
+		<script type="text/javascript" src="../jquery-2.1.1/jquery.min.js" ></script>
+		<script type="text/javascript" src="../bootstrap-3.4.1-dist/js/bootstrap.min.js" ></script>
+	</head>
+	<body>
+		<form class="form-inline">
+			<div class="form-group has-error has-feedback">
+				<label>电子邮件</label>
+				<input type="email" class="form-control" placeholder="请输入电子邮件"/>
+				<span class="glyphicon glyphicon-remove form-control-feedback"></span>
+			</div>
+			<div class="form-group">
+				<label>密码</label>
+				<input type="tel" class="form-control" placeholder="请输入密码"/>
+			</div>
+			<div class="form-group">
+				<label>学费</label>
+				<div class="input-group">
+					<div class="input-group-addon">￥</div>
+					<input type="text" class="form-control">
+					<div class="input-group-addon">元</div>
+				</div>
+			</div>
+		</form>
+		<form class="form-horizontal">
+			<div class="form-group">
+				<label class="col-md-2 control-label">电子邮件</label>
+				<div class="col-md-10">
+					<input type="email" class="form-control" placeholder="请输入电子邮箱"/>
+				</div>
+			</div>
+		</form>
+		<form>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"/>体育
+				</label>
+			</div>
+			<div class="checkbox disabled">
+				<label>
+					<input type="checkbox" disabled/>音乐
+				</label>
+			</div>
+			<div class="form-group-lg">
+				<label class="">爱好</label>
+				<label class="checkbox-inline">
+					<input type="checkbox" name="favorite">体育
+				</label>
+				<label class="checkbox-inline">
+					<input type="checkbox" name="favorite">音乐
+				</label>
+			</div>
+			<div class="radio">
+				<label>
+					<input type="radio" name="sex">男
+				</label>
+				<label>
+					<input type="radio" name="sex">女
+				</label>
+			</div>
+			<div class="form-group-lg">
+				<input type="datetime-local">
+			</div>
+		</form>
+		<img src="welcome.jpg" alt="你好" class="img-circle">
+		<img src="welcome.jpg" alt="你好" class="img-rounded">
+		<img src="welcome.jpg" alt="你好" class="img-thumbnail">
+		<img src="welcome.jpg" alt="你好" class="img-responsive">
+	</body>
+</html>

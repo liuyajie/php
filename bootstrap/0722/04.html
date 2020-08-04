@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Testing</title>
+	<link rel="stylesheet" href="../bootstrap-3.4.1-dist/css/bootstrap.min.css" />
+	<script type="text/javascript" src="../jquery-2.1.1/jquery.min.js" ></script>
+	<script type="text/javascript" src="../bootstrap-3.4.1-dist/js/bootstrap.min.js" ></script>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="clearfix"></div>
+	<button type="button" class="close">&times;</button>
+	<div class="clearfix"></div>
+	<span class="caret"></span>
+	<div class="clearfix"></div>
+	<div class="pull-left">
+		left
+	</div>
+	<div class="clearfix"></div>
+	<div class="pull-left">
+		wo bu dong1
+	</div>
+	<div class="center-block hidden">
+		wo bu dong2
+	</div>
+	<div class="center-block show">
+		wo bu dong3
+	</div>
+	<i class="glyphicon glyphicon-star"></i>
+	<span class="glyphicon glyphicon-star"></span>
+	<button class="btn btn-default btn-lg">
+		<span class="glyphicon glyphicon-star"></span>
+	</button>
+	<button class="btn btn-default btn">
+		<span class="glyphicon glyphicon-star"></span>
+	</button>
+	<button class="btn btn-default btn-sm">
+		<span class="glyphicon glyphicon-star"></span>
+	</button>
+	<button class="btn btn-default btn-xs">
+		<span class="glyphicon glyphicon-star"></span>
+	</button>
+	<div class="dropdown open">
+		<button class="btn btn-default" data-toggle="dropdown">
+			下拉
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu dropdown-menu-left">
+			<li>
+				<a>首页</a>
+			</li>
+			<li class="dropdown-header">测试导航</li>
+			<li class="divider"></li>
+			<li>
+				<a>关于</a>
+			</li>
+		</ul>
+	</div>
+	<div class="btn-group">
+		<button type="button" class="btn btn-default">下拉菜单</button>
+		<button type="button" class="btn btn-default dropdown-toggle"
+				data-toggle="dropdown">
+			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">资讯</a></li>
+			<li><a href="#">产品</a></li>
+			<li><a href="#">关于</a></li>
+		</ul>
+	</div>
+	<button class="btn btn-primary" data-toggle="collapse"
+			data-target="#content">
+		Bootstrap
+	</button>
+	<div class="collapse" id="content">
+		<div class="well">
+			Bootstrap 是 Twitter 推出的一个用于前端开发的开源工具包。它由
+			Twitter 的设计师 Mark Otto 和 Jacob Thornton 合作开发,是一个 CSS/HTML 框架。目
+			前,Bootstrap 最新版本为 3.0 。
+		</div>
+	</div>
+	//手风琴折叠
+	<div class="panel-group" id="accordion">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a href="#collapseOne" data-toggle="collapse"
+					   data-parent="#accordion">点击我进行展示，再点击我进行折叠，第一部分</a>
+				</h4>
+			</div>
+			<div id="collapseOne" class="panel-collapse collapse in">
+				<div class="panel-body">
+					这里是第一部分。
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a href="#collapseTwo" data-toggle="collapse"
+					   data-parent="#accordion">点击我进行展示，再点击我进行折叠，第二部分</a>
+				</h4>
+			</div>
+			<div id="collapseTwo" class="panel-collapse collapse">
+				<div class="panel-body">
+					这里是第二部分。
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a href="#collapseThree" data-toggle="collapse"
+					   data-parent="#accordion">点击我进行展示，再点击我进行折叠，第三部分</a>
+				</h4>
+			</div>
+			<div id="collapseThree" class="panel-collapse collapse">
+				<div class="panel-body">
+					这里是第三部分。
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

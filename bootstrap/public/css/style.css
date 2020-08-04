@@ -1,0 +1,10 @@
+a:link,a:visited,a:active{
+    color: #007bff;
+    text-decoration: none;
+}
+body{
+    background-color: #f8f9fa;
+}
+.show-grid *{
+    border: 1px dashed #9d9d9d;
+}

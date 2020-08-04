@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<title>Testing</title>
+	<link rel="stylesheet" href="../bootstrap-3.4.1-dist/css/bootstrap.min.css" />
+	<script type="text/javascript" src="../jquery-2.1.1/jquery.min.js" ></script>
+	<script type="text/javascript" src="../bootstrap-3.4.1-dist/js/bootstrap.min.js" ></script>
+	<style type="text/css">
+		.secondmenu a {
+			font-size: 12px;
+			color: #4A515B;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var trigger = $('.hamburger'),
+					overlay = $('.overlay'),
+					isClosed = false;
+
+			trigger.click(function () {
+				hamburger_cross();
+			});
+
+			function hamburger_cross() {
+
+				if (isClosed == true) {
+					overlay.hide();
+					trigger.removeClass('is-open');
+					trigger.addClass('is-closed');
+					isClosed = false;
+				} else {
+					overlay.show();
+					trigger.removeClass('is-closed');
+					trigger.addClass('is-open');
+					isClosed = true;
+				}
+			}
+
+			$('[data-toggle="offcanvas"]').click(function () {
+				$('#wrapper').toggleClass('toggled');
+			});
+		});
+	</script>
+</head>
+<body style="background-color: #FAFAFA;">
+<div class="container-fluid">
+	<div class="col-md-12">
+		<ul class="nav nav-pills bg-success">
+			<li role="presentation" class="active">
+				<button class="btn bg-success" type="button">
+					<span class="glyphicon glyphicon-home"></span>
+					回到首页
+				</button>
+			</li>
+			<li class="pull-right">
+				<button class="btn bg-success" type="button">
+					<span class="glyphicon glyphicon-envelope"></span>
+					通知 <span class="badge">4</span>
+				</button>
+			</li>
+			<li class="btn-group pull-right bg-success">
+				<button type="button" class="btn bg-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<span class="glyphicon glyphicon-user"></span>
+					刘亚杰
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">个人中心</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">消息通知</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">个人设置</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">修改密码</a></li>
+					<li role="separator" class="divider"></li>
+					<li><a href="#">退出登录</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="col-md-2">
+		<ul class="nav nav-tabs nav-stacked">
+			<li>
+				<a href="#systemSetting" class="nav-header collapse bg-success" data-toggle="collapse">
+					<i class="glyphicon glyphicon-cog"></i>
+					哈哈哈
+					<span class="pull-right glyphicon glyphicon-chevron-down"></span>
+				</a>
+				<ul id="systemSetting" class="nav nav-tabs nav-stacked collapse secondmenu" style="height: 0px;">
+					<li>
+						<a href="./charts.html"><i class="glyphicon glyphicon-user"></i>学生信息</a>
+					</li>
+					<li>
+						<a href="./charts.html"><i class="glyphicon glyphicon-user"></i>个人资料</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#systemSetting1" class="nav-header collapse bg-success" data-toggle="collapse">
+					<i class="glyphicon glyphicon-cog"></i>
+					哈哈哈
+					<span class="pull-right glyphicon glyphicon-chevron-down"></span>
+				</a>
+				<ul id="systemSetting1" class="nav nav-tabs nav-stacked collapse secondmenu" style="height: 0px;">
+					<li>
+						<a><i class="glyphicon glyphicon-user"></i>学生信息</a>
+					</li>
+					<li>
+						<a><i class="glyphicon glyphicon-user"></i>个人资料</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="#systemSetting2" class="nav-header collapse bg-success" data-toggle="collapse">
+					<i class="glyphicon glyphicon-cog"></i>
+					哈哈哈
+					<span class="pull-right glyphicon glyphicon-chevron-down"></span>
+				</a>
+				<ul id="systemSetting2" class="nav nav-tabs nav-stacked collapse secondmenu" style="height: 0px;">
+					<li>
+						<a><i class="glyphicon glyphicon-user"></i>学生信息</a>
+					</li>
+					<li>
+						<a><i class="glyphicon glyphicon-user"></i>个人资料</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="col-md-10">
+		<div class="col-md-3">
+1
+		</div>
+		<div class="col-md-3">
+2
+		</div>
+		<div class="col-md-3">
+3
+		</div>
+		<div class="col-md-3">
+4
+		</div>
+	</div>
+</div>
+</body>
+</html>

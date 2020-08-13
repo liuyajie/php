@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+<!--    <script type="text/javascript" src="../../bootstrap/jquery-2.1.1/jquery.min.js" ></script>-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<h2 id="h2">abc</h2>
+</body>
+<script type="text/javascript">
+    //假设每隔5秒发送一次请求
+    window.onload = function () {
+        getApi();
+    };
+    function getApi() {
+        //设置时间 5-秒  1000-毫秒  这里设置你自己想要的时间
+        setTimeout(getApi,30*1000);
+
+        // $.getJSON("http://localhost/20200811/01.php?q=javascript&count=1&callback=?", function(data){
+        //     console.log(data);
+        // });
+
+        $.ajax({
+            type:"get",    //请求方式
+            async:true,    //是否异步
+            url:"http://localhost/20200811/01.php",
+            dataType:"jsonp",    //跨域json请求一定是jsonp
+            jsonp: "callbackparam",    //跨域请求的参数名，默认是callback
+            jsonpCallback:"handleResponse",    //自定义跨域参数值，回调函数名也是一样，默认为jQuery自动生成的字符串
+            data:{
+                "query":"1",
+                "username":"1",
+            },
+            beforeSend: function() {
+                //请求前的处理
+                console.log(222);
+            },
+            success: function() {
+                console.log(333);
+                //console.log(response);
+            },
+
+            complete: function() {
+                //请求完成的处理
+                console.log(444);
+            },
+
+            error: function() {
+                console.log(555);
+            }
+        });
+
+        function handleResponse(response){
+            console.log(response);
+        }
+
+        // $.ajax({
+        //     // url: 'http://test.com/202007/0730/02.php',
+        //     url: 'http://localhost/20200811/01.php',
+        //     type: 'get',
+        //     dataType: 'jsonp',
+        //     success: function (data) {
+        //         //方法中传入的参数data为后台获取的数据
+        //         console.log(data);
+        //
+        //         //$('#h2').text(data.count);
+        //
+        //         // $.each(data1,function (index,item) {
+        //         //     //字符串转数组
+        //         //     const code = item['code'].split(',');
+        //         //     //数组转字符串：
+        //         //     const strCode = code.join(' ');
+        //         //     // console.log(strCode)
+        //         //     tr = '<td>'+item['issue']+'</td>'+'<td>'+strCode+'</td>'+'<td>'+item['sum']+'</td>';
+        //         //     $('#table-test').append('<tr>'+tr+'</tr>')
+        //         // })
+        //     },
+        //     failed:function(){
+        //         console.log(555);
+        //     }
+        // })
+
+
+    }
+</script>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSONP实现跨域</title>
+</head>
+<body>
+<div id="mydiv">
+    <button id="btn">点击</button>
+</div>
+</body>
+<script type="text/javascript">
+    function handleResponse(response){
+        console.log(response);
+    }
+</script>
+<script type="text/javascript">
+    window.onload = function() {
+        let oBtn = document.getElementById('btn');
+        oBtn.onclick = function() {
+            let script = document.createElement("script");
+            script.src = "http://localhost/20200811/jsonp.php?callback=handleResponse";
+            document.body.insertBefore(script, document.body.firstChild);
+        };
+    };
+</script>
+</html>

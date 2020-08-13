@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <script type="text/javascript" src="../../../learn/bootstrap/jquery-2.1.1/jquery.min.js" ></script>
+</head>
+<body>
+    <h2 id="h2">abc</h2>
+    <h2 id="h3">abc</h2>
+</body>
+<script type="text/javascript">
+    //假设每隔5秒发送一次请求
+    window.onload = function () {
+        getApi();
+    };
+    function getApi() {
+        //设置时间 5-秒  1000-毫秒  这里设置你自己想要的时间
+        setTimeout(getApi,30*1000);
+        $.ajax({
+            url: 'http://test.com/202007/0728/09.php',
+            type: 'get',
+            dataType: 'json',
+            success: function (data) {
+                //方法中传入的参数data为后台获取的数据
+                // console.log(data.data);
+
+                $('#h2').text(data.total);
+                $('#h3').text(data.insert);
+
+                // $.each(data1,function (index,item) {
+                //     //字符串转数组
+                //     const code = item['code'].split(',');
+                //     //数组转字符串：
+                //     const strCode = code.join(' ');
+                //     // console.log(strCode)
+                //     tr = '<td>'+item['issue']+'</td>'+'<td>'+strCode+'</td>'+'<td>'+item['sum']+'</td>';
+                //     $('#table-test').append('<tr>'+tr+'</tr>')
+                // })
+            },
+            failed:function(){
+                console.log(555);
+            }
+        })
+    }
+</script>
+</html>

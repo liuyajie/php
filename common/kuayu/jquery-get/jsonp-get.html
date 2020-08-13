@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery实现跨域</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="mydiv">
+    <button id="btn">点击</button>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        let oBtn = document.getElementById('btn');
+        oBtn.onclick = function() {
+            $.ajax({
+                type:"get",    //请求方式
+                async:true,    //是否异步
+                url:"http://localhost/20200811/jsonp.php",
+                dataType:"jsonp",    //跨域json请求一定是jsonp
+                jsonp: "callback",    //跨域请求的参数名，默认是callback
+                jsonpCallback:"handleResponse",  //自定义跨域参数值，回调函数名也是一样，默认为jQuery自动生成的字符串,随便写无所谓的
+                data:{
+                    "query":"1",
+                    "username":"1",
+                    "password":'15'
+                },
+                beforeSend: function() {
+                    //请求前的处理
+                    console.log(222);
+                },
+                success: function(response) {
+                    console.log(response);
+                    //console.log(response);
+                },
+                complete: function() {
+                    //请求完成的处理
+                    console.log(444);
+                },
+                error: function() {
+                    console.log(555);
+                }
+            });
+
+        };
+    };
+</script>
+</html>

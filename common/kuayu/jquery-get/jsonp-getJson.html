@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery实现跨域</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="mydiv">
+    <button id="btn">点击</button>
+</div>
+</body>
+<script type="text/javascript">
+    window.onload = function() {
+        let oBtn = document.getElementById('btn');
+        oBtn.onclick = function() {
+            $.getJSON("http://localhost/20200811/jsonp.php?username=1&password=123&callback=?", function(data){
+                console.log(data);
+            });
+        };
+    };
+</script>
+</html>

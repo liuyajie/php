@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        @keyframes typing { from { width: 0; } }
+        @keyframes blink-caret { 50% { border-color: transparent; } }
+
+        h1 {
+            font: bold 200% Consolas, Monaco, monospace;
+            border-right: .1em solid;
+            width: 16.5em; /* fallback */
+            width: 30ch; /* # of chars */
+            margin: 2em 1em;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 5s steps(16, end), /* # of steps = # of chars */
+            blink-caret .5s step-end infinite alternate;
+        }
+    </style>
+</head>
+<body>
+<h1>我是刘亚杰</h1>
+</body>
+</html>

@@ -1,4 +1,0 @@
-[12-Aug-2020 17:33:48 Asia/Shanghai] PHP Notice:  Undefined variable: a in C:\www\php\days\20200812\001.php on line 4
-[12-Aug-2020 17:33:48 Asia/Shanghai] PHP Warning:  date() expects at least 1 parameter, 0 given in C:\www\php\days\20200812\001.php on line 6
-[12-Aug-2020 17:33:48 Asia/Shanghai] PHP Notice:  Undefined variable: a in C:\www\php\days\20200812\001.php on line 4
-[12-Aug-2020 17:33:48 Asia/Shanghai] PHP Warning:  date() expects at least 1 parameter, 0 given in C:\www\php\days\20200812\001.php on line 6

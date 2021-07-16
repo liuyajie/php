@@ -1,13 +1,13 @@
 {
+    "name": "lyj/php",
+    "authors": [
+        {
+            "name": "刘亚杰",
+            "email": "920288326@qq.com"
+        }
+    ],
     "require": {
-        "symfony/var-dumper": "^5.1",
-        "guzzlehttp/guzzle": "^7.0",
-        "ext-json": "*",
-        "ext-pdo": "*",
-        "ext-iconv": "*",
-        "owner888/phpspider": "2.1.5",
-        "catfan/medoo": "^1.7",
-        "ext-redis": "*",
-        "ext-fileinfo": "*"
+        "monolog/monolog": "^2.3",
+        "catfan/medoo": "^2.1"
     }
 }

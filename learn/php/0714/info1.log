@@ -1,0 +1,3 @@
+[2021-07-14T16:54:40.300331+08:00] myApp1.INFO: this is a info1 message [] []
+[2021-07-14T16:54:40.300331+08:00] myApp1.DEBUG: this is a debug1 message [] []
+[2021-07-14T16:54:40.300331+08:00] myApp1.WARNING: this is a warning1 message [] []
